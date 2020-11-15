@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MultiknApp</string>
+    <string name="speech_prompt">Starta video</string>
+    <string name="speech_not_supported">Speech not supported</string>
+</resources>

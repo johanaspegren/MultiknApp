@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "758734162770",
+    "firebase_url": "https://multiknappen.firebaseio.com",
+    "project_id": "multiknappen",
+    "storage_bucket": "multiknappen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758734162770:android:eaf44b997fbf084028888b",
+        "android_client_info": {
+          "package_name": "com.aspegrenide.multiknapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "758734162770-hj78e1ci5a9ph4o3cgo51dmqcbmujqg8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc8WQEFmNLD43a_CvRyYqRHsfo6Cz7WJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "758734162770-hj78e1ci5a9ph4o3cgo51dmqcbmujqg8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

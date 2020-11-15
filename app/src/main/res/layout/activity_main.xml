@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnStartVideoRecording"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="238dp"
+        android:layout_height="210dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/film_black" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="140dp"
+        android:layout_height="160dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+
+    <Button
+        android:id="@+id/btnRecordVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginLeft="74dp"
+        android:layout_marginTop="128dp"
+        android:onClick="recordVideo"
+        android:text="Spela in meddelande"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoView" />
+
+    <ImageView
+        android:id="@+id/imgViewRecord"
+        android:layout_width="173dp"
+        android:layout_height="134dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="recordVideo"
+        app:layout_constraintBottom_toBottomOf="@+id/btnRecordVideo"
+        app:layout_constraintStart_toStartOf="@+id/btnRecordVideo"
+        app:srcCompat="@drawable/video" />
+
+
+    <Button
+        android:id="@+id/btnPlayVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="generateTextFromVideo"
+        android:text="Skapa textmeddelande"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRecordVideo"
+        app:layout_constraintTop_toTopOf="@+id/btnRecordVideo" />
+
+
+    <ImageView
+        android:id="@+id/imgViewAbc"
+        android:layout_width="173dp"
+        android:layout_height="134dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="generateTextFromVideo"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlayVideo"
+        app:layout_constraintEnd_toEndOf="@+id/btnPlayVideo"
+        app:srcCompat="@drawable/school" />
+
+
+
+    <CheckBox
+        android:id="@+id/chkEnhetKometen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Kometen"
+        android:onClick="chkKlicked"
+        app:layout_constraintStart_toStartOf="@+id/btnRecordVideo"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecordVideo" />
+
+    <CheckBox
+        android:id="@+id/chkEnhetMullvaden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Mullvaden"
+        app:layout_constraintStart_toStartOf="@+id/chkEnhetKometen"
+        app:layout_constraintTop_toBottomOf="@+id/chkEnhetKometen" />
+
+
+    <CheckBox
+        android:id="@+id/chkEnhetAteljeCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Ateljé City"
+        app:layout_constraintStart_toEndOf="@+id/chkEnhetKometen"
+        app:layout_constraintTop_toTopOf="@+id/chkEnhetKometen" />
+
+    <CheckBox
+        android:id="@+id/chkEnhetDunckers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Dunckers"
+        app:layout_constraintStart_toStartOf="@+id/chkEnhetAteljeCity"
+        app:layout_constraintTop_toBottomOf="@+id/chkEnhetAteljeCity" />
+
+
+    <CheckBox
+        android:id="@+id/chkEnhetMurteglet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Murteglet"
+        app:layout_constraintStart_toEndOf="@+id/chkEnhetAteljeCity"
+        app:layout_constraintTop_toTopOf="@+id/chkEnhetAteljeCity" />
+
+    <CheckBox
+        android:id="@+id/chkEnhetKaptenen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Kaptenen"
+        app:layout_constraintStart_toStartOf="@+id/chkEnhetMurteglet"
+        app:layout_constraintTop_toBottomOf="@+id/chkEnhetMurteglet" />
+
+    <CheckBox
+        android:id="@+id/chkEnhetCafeSoder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Café Söder"
+        app:layout_constraintStart_toEndOf="@+id/chkEnhetMurteglet"
+        app:layout_constraintTop_toTopOf="@+id/chkEnhetMurteglet" />
+
+    <CheckBox
+        android:id="@+id/chkEnhetRingstorp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ringstorp"
+        app:layout_constraintStart_toStartOf="@+id/chkEnhetCafeSoder"
+        app:layout_constraintTop_toBottomOf="@+id/chkEnhetCafeSoder" />
+
+
+    <EditText
+        android:id="@+id/tvTextMessage"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Meddelande här..."
+        app:layout_constraintStart_toStartOf="@+id/chkEnhetMullvaden"
+        app:layout_constraintTop_toBottomOf="@+id/chkEnhetDunckers" />
+
+
+    <EditText
+        android:id="@+id/tvTextMessageEN"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Engelsk översättning"
+        app:layout_constraintStart_toStartOf="@+id/tvTextMessage"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextMessage" />
+
+    <EditText
+        android:id="@+id/tvTextMessageFA"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Farsi"
+        app:layout_constraintStart_toStartOf="@+id/tvTextMessageEN"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextMessageEN" />
+
+
+    <Button
+        android:id="@+id/btnSaveMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:onClick="saveMessage"
+        android:text="Spara meddelande"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewSparaMedd"
+        app:layout_constraintStart_toStartOf="@+id/imgViewSparaMedd"
+        app:layout_constraintTop_toTopOf="@+id/imgViewSparaMedd" />
+
+    <ImageView
+        android:id="@+id/imgViewSparaMedd"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="96dp"
+        android:onClick="saveMessage"
+        app:layout_constraintStart_toStartOf="@+id/btnRecordVideo"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextMessageEN"
+        app:srcCompat="@drawable/save" />
+
+    <Button
+        android:id="@+id/btnGenerateMessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:onClick="skapaMeddelanden"
+        android:text="Skicka"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewSkicka"
+        app:layout_constraintTop_toTopOf="@+id/btnSaveMessage" />
+
+
+    <ImageView
+        android:id="@+id/imgViewSkicka"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:onClick="skapaMeddelanden"
+        app:layout_constraintEnd_toEndOf="@+id/btnPlayVideo"
+        app:layout_constraintTop_toTopOf="@+id/imgViewSparaMedd"
+        app:srcCompat="@drawable/email" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
